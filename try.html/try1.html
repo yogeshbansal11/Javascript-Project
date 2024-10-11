@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Toggle</title>
+    <style>
+        .on {
+            background-color: green;
+            color: white;
+        }
+        .off {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleButton" class="off">OFF</button>
+
+    <script>
+        // __define-ocg__ Button toggle functionality
+        var varOcg = document.getElementById("toggleButton");
+        
+        varOcg.addEventListener("click", function() {
+            if (varOcg.textContent === "OFF") {
+                varOcg.textContent = "ON";
+                varOcg.classList.remove("off");
+                varOcg.classList.add("on");
+            } else {
+                varOcg.textContent = "OFF";
+                varOcg.classList.remove("on");
+                varOcg.classList.add("off");
+            }
+        });
+    </script>
+
+</body>
+</html>
